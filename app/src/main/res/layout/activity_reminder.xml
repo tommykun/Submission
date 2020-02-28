@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    android:background="@color/colorPrimary"
+    tools:context=".ReminderActivity">
+
+    <TextView
+        android:id="@+id/tvNotifTitle"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:textColor="@color/white"
+        android:text="@string/notification_setting" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_reminder"
+        android:layout_below="@id/tvNotifTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:id="@+id/daily_notif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:text="@string/daily_reminder_notification"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/turn_on_off_daily_reminder" />
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/switch_daily"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <View
+        android:id="@+id/pembatas1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/cv_reminder"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@color/colorPrimary" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_daily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pembatas1"
+        android:elevation="6dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:id="@+id/upcoming_notif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/upcoming_reminder_notification" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/turn_on_off_upcoming_reminder" />
+            </LinearLayout>
+
+            <Switch
+
+                android:id="@+id/switch_upcoming"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignParentRight="true"
+                android:checked="false"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/viewupcoming"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/cv_daily"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@color/colorPrimary" />
+
+
+    <TextView
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/tvSetingTitle"
+        android:layout_below="@id/viewupcoming"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:textColor="@color/white"
+        android:text="@string/setting" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_setting"
+        android:layout_below="@+id/tvSetingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:id="@+id/setting_local"
+            android:onClick="onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSetingTitle"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/setting_locale" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/change_your_phone_localization" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvSetingTitle" />
+
+</RelativeLayout>

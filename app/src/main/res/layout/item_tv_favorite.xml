@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_movie"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/IvTvFavorite"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/poster_glass"/>
+
+        <TextView
+            android:padding="8dp"
+            android:id="@+id/tvTvTitleFavorite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/IvTvFavorite"
+            android:layout_toEndOf="@id/IvTvFavorite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Title"/>
+
+        <TextView
+            android:layout_below="@id/tvTvTitleFavorite"
+            android:padding="8dp"
+            android:id="@+id/tvTvDescFavorite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/IvTvFavorite"
+            android:layout_toEndOf="@id/IvTvFavorite"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:text="Deskripsi"/>
+
+        <Button
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_below="@id/tvTvDescFavorite"
+            android:layout_toRightOf="@id/IvTvFavorite"
+            android:id="@+id/btnHapusTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:text="Hapus"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
